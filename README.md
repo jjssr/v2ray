@@ -1,19 +1,3 @@
-Skip to content
-Why GitHub? 
-Team
-Enterprise
-Explore 
-Marketplace
-Pricing 
-Search
-
-Sign in
-Sign up
-233boy
-/
-v2ray
-34111.4k10.7k
- Code Issues 343 Pull requests 0 Actions Wiki Security 0 Insights
 V2Ray一键安装脚本
 233boy edited this page on 31 Dec 2019 · 11 revisions
 支持 V2Ray 绝大多数传输协议，WebSocket + TLS，HTTP/2，Shadowsocks，动态端口，集成 BBR 和锐速优化等。
@@ -202,29 +186,3 @@ V2Ray： https://www.v2ray.com/
 其他
 请勿违反国家法律法规，否则后果自负！
 使用一键脚本并不会害了你，并且会让你节省大量的时间，工具从来都是为了更快的解决问题。
-
-
-
-返回主页
-
- Pages 5
-Find a Page…
-Home
-V2RayN使用教程
-V2Ray一键安装脚本
-V2Ray搭建详细图文教程
-使用Cloudflare中转V2Ray流量
-Clone this wiki locally
-https://github.com/233boy/v2ray.wiki.git
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
