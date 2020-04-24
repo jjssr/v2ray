@@ -16,6 +16,9 @@ centos 系统安装 Curl 方法: yum update -y && yum install curl -y
 
 备注：安装完成后，输入 v2ray 即可管理 V2Ray
 如果提示你的系统不支持此脚本，那么请尝试更换系统
+
+PC端不能翻墙解决方法
+
 v2ray默认配置文件在/etc/v2ray/conf.json，我们只需编辑这个文件并添加一行就行了：
 
 vim /etc/v2ray/config.json
@@ -79,4 +82,4 @@ vim /etc/v2ray/config.json
       ]
     }
   }
-将上述listen碱性中的12.34.56.78替换成真实IP，保存。
+将上述listen字段中的12.34.56.78替换成真实IP，保存，退出。
