@@ -16,3 +16,67 @@ centos 系统安装 Curl 方法: yum update -y && yum install curl -y
 
 备注：安装完成后，输入 v2ray 即可管理 V2Ray
 如果提示你的系统不支持此脚本，那么请尝试更换系统
+v2ray默认配置文件在/etc/v2ray/conf.json，我们只需编辑这个文件并添加一行就行了：
+
+vim /etc/v2ray/config.json
+
+{
+  "log" : {
+    "access": "/var/log/v2ray/access.log",
+    "error": "/var/log/v2ray/error.log",
+    "loglevel": "warning"
+  },
+  "inbound": {
+    "port": 21xxx,
+    "protocol": "vmess",
+        "listen":"12.34.56.78", <------就是这一行
+    "settings": {
+      "clients": [
+        {
+          "id": "e59b0cba-204c-4d58-85a5-xxxxxxxxxxxxxxx",
+          "level": 1,
+          "alterId": 64
+        }
+      ]
+    }
+  },
+  "outbound": {
+    "protocol": "freedom",
+    "settings": {}
+  },
+  "outboundDetour": [
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "blocked"
+    }
+  ],
+  "routing": {
+    "strategy": "rules",
+    "settings": {
+      "rules": [
+        {
+          "type": "field",
+          "ip": [
+            "0.0.0.0/8",
+            "10.0.0.0/8",
+            "100.64.0.0/10",
+            "127.0.0.0/8",
+            "169.254.0.0/16",
+            "172.16.0.0/12",
+            "192.0.0.0/24",
+            "192.0.2.0/24",
+            "192.168.0.0/16",
+            "198.18.0.0/15",
+            "198.51.100.0/24",
+            "203.0.113.0/24",
+            "::1/128",
+            "fc00::/7",
+            "fe80::/10"
+          ],
+          "outboundTag": "blocked"
+        }
+      ]
+    }
+  }
+将上述listen碱性中的12.34.56.78替换成真实IP，保存。
